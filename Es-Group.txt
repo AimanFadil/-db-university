@@ -10,3 +10,9 @@ GROUP BY `anni`;
 FROM `teachers` 
 GROUP BY `ufficio`;
 
+3- Calcolare la media dei voti di ogni appello d'esame
+
+3. SELECT ROUND(AVG(`vote`)) AS `media_voto`, `exam_id` AS `appelli_esame`
+FROM `exam_student`
+GROUP BY `appelli_esame`;
+
