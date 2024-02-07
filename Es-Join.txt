@@ -11,3 +11,11 @@ WHERE `degrees`.`name`= 'Corso di Laurea in Economia';
 FROM `courses` 
 JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
 WHERE `course_teacher`.`teacher_id` = 44;
+
+5- Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+5. SELECT `degrees`.`name`AS `nome corso laurea` , `courses`.`name` AS `nome corso` , `teachers`.`surname` AS `cognome prof`, `teachers`.`name`AS `nome prof`
+FROM `degrees`
+JOIN `courses` ON `degrees`.`id` = `courses`.`degree_id`
+JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
+JOIN `teachers` ON `courses`.`id` = `teachers`.`id`;
