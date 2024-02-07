@@ -4,3 +4,9 @@
 FROM `students`
 GROUP BY `anni`;
 
+2- Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+2. SELECT COUNT(*) AS `prof`, `office_address` AS `ufficio`
+FROM `teachers` 
+GROUP BY `ufficio`;
+
